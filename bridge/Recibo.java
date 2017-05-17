@@ -1,0 +1,28 @@
+import java.io.*;
+
+public class Recibo implements Documento {
+	private double valor;
+	private String emissor;
+	private String favorecido;
+	private GeradorDeArquivo gerador;
+	
+	public Recibo(String emissor, String favorecido, double valor, GeradorDeArquivo gerador){
+		this.emissor = emissor;
+		this.favorecido = favorecido;
+		this.valor = valor;
+		this.gerador = gerador;
+	}
+
+
+	public void gerarArquivo(){
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("Recibo: ");
+		buffer.append("\n");
+		buffer.append("Empresa: " + this.emissor);
+		buffer.append("\n");
+		buffer.append("Cliente: " + this.favorecido);
+		buffer.append("\n");
+		buffer.append("Valor: " + this.valor);
+		this.gerador.geraDocumento(buffer.toString());
+	}
+}

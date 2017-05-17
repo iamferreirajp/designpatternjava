@@ -1,0 +1,4 @@
+Recibo: 
+Empresa: Banco do Brasil
+Cliente: João Paulo
+Valor: 1000.0
